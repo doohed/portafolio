@@ -230,7 +230,7 @@ function Home() {
               <div>
                 <h3>Ecom</h3>
               </div>
-              <img className="projectP" src="/public/ecom.png" />
+              <img className="projectP" src="/ecom.png" />
             </Head>
             <div className="cont">
               <span>
