@@ -1,0 +1,60 @@
+.home {
+  width: 100%;
+  background-color: white;
+}
+
+.landing {
+  &::-webkit-scrollbar{
+    display: none;
+    
+  }
+  
+}
+
+.btn-h {
+  margin: 10px;
+}
+
+.avatar {
+    height: 100px;
+    border-radius: 50%;
+}
+
+.projectP {
+  height: 90px;
+}
+
+.icons-holder {
+  display: grid;
+  position: flex;
+  grid-template-rows: auto auto;
+  left: 50px;
+  place-items: center;
+}
+
+
+.skill-set {
+  margin-top: 10px;
+}
+
+.Ttext {
+    border-right: 3px solid;
+    animation: blink .5s step-end infinite alternate;
+}
+
+.iconss {
+  height: 50px;
+  margin: 10px
+}
+
+.cont {
+  margin-top: 30px;
+  text-align:left;
+}
+
+@keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
