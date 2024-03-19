@@ -24,10 +24,18 @@ a:hover {
 
 body {
   overflow-y: hidden;
+  overflow-x:hidden;
   display: flex;
   place-items: center;
+  margin-top:30px;
   min-width: 320px;
-  min-height: 98vh;
+  background-size: cover;
+  @media (max-width: 810px) {
+    overflow-y: auto;
+  }
+  @media (max-height: 990px) {
+    overflow-y: auto;
+  }
 }
 
 h1 {

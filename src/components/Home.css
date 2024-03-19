@@ -16,7 +16,7 @@
 }
 
 .avatar {
-    height: 100px;
+    height: 90px;
     border-radius: 50%;
 }
 
@@ -26,10 +26,12 @@
 
 .icons-holder {
   display: grid;
-  position: flex;
   grid-template-rows: auto auto;
   left: 50px;
   place-items: center;
+  @media (max-width: 800px) {
+    margin: 20px;
+  }
 }
 
 
@@ -44,7 +46,7 @@
 
 .iconss {
   height: 50px;
-  margin: 10px
+  margin: 1px
 }
 
 .cont {

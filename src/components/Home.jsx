@@ -1,34 +1,44 @@
 import { useEffect, useRef, useState } from "react";
 import "./Home.css";
+import Projects from "./Projects";
 import styled from "styled-components";
 
 const Presentation = styled.div`
   grid-row-start: 1;
   grid-row-end: 3;
-
   background-color: #333333;
   border-radius: 10px;
   margin: 10px;
   text-align: left;
-  margin-top: 80px;
+  @media (max-width: 810px) {
+    width: auto;
+    left: 3vw;
+    transform: translate(0%, 0%);
+    grid-row-start: auto;
+    grid-row-end: auto;
+  }
 `;
 const Skills = styled.div`
   background-color: #333333;
   border-radius: 10px;
   margin: 10px;
-  margin-top: 80px;
+  @media (max-width: 810px) {
+    margin-top: 12px;
+  }
 `;
 const Terminal = styled.div`
   background-color: #333333;
   border-radius: 10px;
   margin: 10px;
-  height: 225px;
   cursor: pointer;
+  @media (max-width: 800px) {
+    height: 170px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
 `;
 
-const SkillsCont = styled.div``;
-const Cont = styled.div`
-  margin: 20px;
+const SkillsCont = styled.div`
 `;
 
 const Title = styled.div`
@@ -45,30 +55,17 @@ const Content = styled.div`
   margin: 10px;
 `;
 
-const Image = styled.div`
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background-image: url("https://ubuntucommunity.s3.us-east-2.amazonaws.com/original/2X/3/3f0d4b8955230d84c8a00e1e4f1051212bfe1781.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-`;
-
-const Head = styled.div`
-  display: flex;
-  justify-content: space-between;
-  text-align: left;
-`;
-
 const Container = styled.div`
   display: grid;
-  grid-template-rows: 300px 200px;
+  height: 70vh;
+  grid-template-rows: 230px 200px 160px 150px;
   grid-template-columns: 400px 400px;
-  margin-top: -6%;
+  
+  @media (max-width: 810px) {
+    width: 75vw;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+  }
 `;
 
 const Socials = styled.div`
@@ -76,22 +73,34 @@ const Socials = styled.div`
   border-radius: 10px;
   margin: 10px;
   text-align: center;
+  @media (max-width: 810px) {
+    bottom: 10px;
+  }
 `;
 
-const Projects = styled.div`
+const Procont = styled.div`
   background-color: #333333;
   border-radius: 10px;
   margin: 10px;
   text-align: center;
   grid-row-start: 2;
   grid-row-end: 5;
+  @media (max-width: 800px) {
+    grid-row-start: 4;
+    grid-row-end: auto;
+  }
+  
 `;
 
-const Stats = styled.div`
+const Head = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-left: 40px;
-  margin-right: 40px;
+  text-align: left;
+  height: 170px;
+`;
+
+const Cont = styled.div`
+  margin: 15px;
 `;
 
 const SocialIcons = styled.div``;
@@ -142,7 +151,7 @@ function Home() {
 
   return (
     <div className="landing">
-      <Image />
+
       <Container id="home">
         <Presentation>
           <Cont>
@@ -223,42 +232,10 @@ function Home() {
             </a>
           </SocialIcons>
         </Socials>
-        <Projects>
-          <Cont>
-            <h2>Projects</h2>
-            <Head>
-              <div>
-                <h3>Ecom</h3>
-              </div>
-              <img className="projectP" src="/ecom.png" />
-            </Head>
-            <div className="cont">
-              <span>
-                Ecommerce front-end page for preview a simple product.
-              </span>
-              <br />
-              <br />
-              <span>With this project I learned how to use threejs</span>
-            </div>
-            <Stats>
-              <div>
-                <h4>Tech</h4>
-                <img
-                  className="skill-set"
-                  src="https://skillicons.dev/icons?i=vite,js"
-                />
-              </div>
-              <div>
-                <h4>Live demo</h4><a href="https://ecom-eight-tan.vercel.app/">
-              <img
-                className="iconss"
-                src="https://cdn.icon-icons.com/icons2/2406/PNG/96/github_git_icon_145985.png"
-              />
-              </a>
-              </div>
-            </Stats>
-          </Cont>
-        </Projects>
+
+        <Procont>
+          <Projects />
+        </Procont>
       </Container>
     </div>
   );
