@@ -27,13 +27,14 @@ body {
   overflow-x:hidden;
   display: flex;
   place-items: center;
-  margin-top:30px;
+
+  margin-top:40px;
   min-width: 320px;
   background-size: cover;
   @media (max-width: 810px) {
     overflow-y: auto;
   }
-  @media (max-height: 990px) {
+  @media (max-height: 810px) {
     overflow-y: auto;
   }
 }

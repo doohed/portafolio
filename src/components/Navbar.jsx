@@ -12,7 +12,7 @@ const Section = styled.div`
   width: 800px;
   justify-content: space-between;
 
-  @media (max-width: 800px) {
+  @media (max-width: 810px) {
     width: 90vw;
     left: 6vw;
     transform: translate(0%, 0%);
@@ -59,6 +59,11 @@ const ListItem = styled.a`
   &.name:hover {
     color: white;
   }
+
+  @media (max-width: 400px) {
+    font-size:12px;
+  }
+
 `;
 
 const Navbar = () => {
