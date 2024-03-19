@@ -51,6 +51,8 @@ const Title = styled.div`
   margin-top: -20px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  @media (max-width: 362) {
+  }
 `;
 
 const Content = styled.div`
@@ -63,8 +65,17 @@ const Container = styled.div`
   grid-template-rows: auto;
   grid-template-columns: 400px 400px;
   @media (max-width: 810px) {
-    margin-left: -10px;
-    width: 80vw;
+    margin-left: -2vw;
+    width: 74vw;
+    min-width: 0px;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+  }
+
+  @media (max-width: 375px) {
+    margin-left: -22px;
+    width: 90vw;
+    min-width: 300px;
     grid-template-rows: auto;
     grid-template-columns: auto;
   }

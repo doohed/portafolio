@@ -29,7 +29,7 @@ body {
   place-items: center;
 
   margin-top:40px;
-  min-width: 320px;
+ 
   background-size: cover;
   @media (max-width: 810px) {
     overflow-y: auto;

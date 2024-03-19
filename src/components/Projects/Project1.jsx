@@ -9,7 +9,7 @@ const Stats = styled.div`
 `;
 
 const Head = styled.div`
-  display: flex;
+  height: 170px;
   text-align: center;
 `;
 
