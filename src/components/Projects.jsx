@@ -10,6 +10,12 @@ const Cont = styled.div`
 
 const Naav = styled.div`
 
+
+        @media (max-width:462px){
+     justify-content: space-between;
+     align-items: center;
+     
+    }
 `;
 
 const Projects = () => {
@@ -23,22 +29,21 @@ const Projects = () => {
     <div>
       <Cont>
         <Project1 />
-        
       </Cont>
       <Naav>
-          <button className="arrows">
-            <a>{"<"}</a>
-          </button>
-          <a className="arrows" href="https://ecom-eight-tan.vercel.app/">
-            <button> Live demo</button>
-          </a>
-          <a className="arrows" href="https://github.com/doohed">
-            <button>Source</button>
-          </a>
-          <button className="arrows">
-            <a onClick={set}>{">"}</a>
-          </button>
-        </Naav>
+        <button className="arrows back">
+          <a>{"<"}</a>
+        </button>
+        <a className="arrows live" href="https://ecom-eight-tan.vercel.app/">
+          <button> Live demo</button>
+        </a>
+        <a className="arrows source" href="https://github.com/doohed">
+          <button>Source</button>
+        </a>
+        <button className="arrows next">
+          <a onClick={set}>{">"}</a>
+        </button>
+      </Naav>
     </div>
   );
 };

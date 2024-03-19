@@ -6,8 +6,8 @@ import styled from "styled-components";
 const Presentation = styled.div`
   grid-row-start: 1;
   grid-row-end: 3;
-  backdrop-filter: blur(10px);
-  background-color: #00000089;
+  backdrop-filter: blur(5px);
+  background-color: #00000055;
   border-radius: 10px;
   margin: 10px;
   text-align: left;
@@ -75,6 +75,13 @@ const Container = styled.div`
   @media (max-width: 375px) {
     margin-left: -22px;
     width: 90vw;
+    min-width: 300px;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+  }
+  @media (max-width: 331px) {
+    margin-left: -41px;
+    width: 100vw;
     min-width: 300px;
     grid-template-rows: auto;
     grid-template-columns: auto;

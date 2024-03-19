@@ -1,8 +1,21 @@
-.arrows { 
-    margin:2px;
-    margin-bottom: 10px;
-}
+.arrows {
+  margin:2px;
+  margin-bottom: 10px;
+  @media (max-width: 462px) {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1em;
+    margin:4px;
+    margin-bottom: 20px;
+    font-size: .7em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
 
-.icons{
-    
+  @media (max-width: 416px) {
+    font-size: .65em;
+  }
 }

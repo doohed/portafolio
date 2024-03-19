@@ -31,6 +31,7 @@ const Project1 = () => {
       </Head>
       <div className="cont">
         <span>A page showcasing a product.</span>
+        <br />
         <span>Front-end page for preview a simple product.</span>
       </div>
       <Stats>

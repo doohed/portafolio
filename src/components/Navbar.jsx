@@ -37,6 +37,10 @@ const Blur = styled.div`
 const Title = styled.div`
   margin-top: 18px;
   display: flex;
+  @media (max-width: 331px) {
+    width: 10px;
+    height: 10px;
+  }
 `;
 
 const Links = styled.div`
@@ -63,6 +67,7 @@ const ListItem = styled.a`
   @media (max-width: 400px) {
     font-size:12px;
   }
+
 
 `;
 
