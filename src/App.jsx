@@ -14,11 +14,14 @@ const Image = styled.img`
   top: 0px;
   left: 0px;
   z-index: -1;
-  position: fixed;
+  position: absolute;
   height: 100%;
   width: 100%;
   object-fit: cover;
   margin: 0 auto;
+  @media (max-width: 810px) {
+
+  }
 `;
 
 const router = createBrowserRouter([
