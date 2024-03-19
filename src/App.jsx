@@ -16,7 +16,7 @@ const Image = styled.div`
   z-index: -1;
   position: absolute;
   height: 100vh;
-  min-height: 818px;
+  min-height: 1000px;
   width: 100%;
   background-image: url(https://wallpapers.com/images/hd/aesthetic-rain-wkfiz5qfrxlbx4fl.jpg);
   background-position: center;
@@ -24,7 +24,7 @@ const Image = styled.div`
   background-repeat: no-repeat;
   @media (max-width: 810px) {
     bottom: 10px;
-    min-height: 1160px;
+    min-height: 1650px;
   }
 
 

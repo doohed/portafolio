@@ -48,7 +48,7 @@ const Title = styled.div`
   text-align: center;
   min-height: 10px;
   background-color: #00000055;
-  margin-top: -21px;
+  margin-top: -20px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 `;
@@ -63,7 +63,8 @@ const Container = styled.div`
   grid-template-rows: auto;
   grid-template-columns: 400px 400px;
   @media (max-width: 810px) {
-    width: 75vw;
+    margin-left: -10px;
+    width: 80vw;
     grid-template-rows: auto;
     grid-template-columns: auto;
   }
