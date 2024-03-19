@@ -6,13 +6,15 @@ import styled from "styled-components";
 const Presentation = styled.div`
   grid-row-start: 1;
   grid-row-end: 3;
-  backdrop-filter: blur(5px);
+  height: 340px;
+  backdrop-filter: blur(10px);
   background-color: #00000055;
   border-radius: 10px;
   margin: 10px;
   text-align: left;
 
   @media (max-width: 810px) {
+    height: auto;
     width: auto;
     left: 3vw;
     transform: translate(0%, 0%);
@@ -35,7 +37,7 @@ const Terminal = styled.div`
   border-radius: 10px;
   margin: 10px;
   cursor: pointer;
-  height: 150px;
+  height: 200px;
   @media (max-width: 810px) {
     grid-row-start: 2;
     grid-row-end: 3;
@@ -47,17 +49,16 @@ const SkillsCont = styled.div``;
 const Title = styled.div`
   text-align: center;
   min-height: 10px;
-  background-color: #00000055;
+  background-color: #0000001f;
   margin-top: -20px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  @media (max-width: 362) {
-  }
 `;
 
 const Content = styled.div`
   text-align: left;
-  margin: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 `;
 
 const Container = styled.div`
@@ -117,7 +118,11 @@ const Head = styled.div`
   display: flex;
   justify-content: space-between;
   text-align: left;
-  height: 170px;
+  height: 120px;
+
+  @media (max-width:447px) {
+    height: 160px;
+  }
 `;
 
 const Cont = styled.div`
@@ -129,15 +134,14 @@ const SocialIcons = styled.div``;
 function Home() {
   const text = [
     "  Sometimes programming is more about the process and what you give to people rather than the money :)",
-    " My daily drive is Linux, I been hoping through a lot of distros (like arch btw) but for now I'll stay with Ubuntu",
+    " My daily drive is Linux, I been hopping through a lot of distros (like arch btw) but for now I'll stay with Ubuntu",
     " My favorite games are the souls saga",
     " Let's keep trying, Never give up!!",
     " When I'm not online, I love going out on my bike",
     " There's my contact info down there...",
-    " I'm still looking for a job :(",
-    " I love minimalism that's the reason I prefer linux",
+    " I'm still looking for a job :c",
+    " I love minimalism thats the reason I prefer linux",
     " I usually code as a hobby",
-    "",
   ];
 
   const [count, setCount] = useState(1);

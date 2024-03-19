@@ -29,7 +29,7 @@ const Blur = styled.div`
   transform: translate(-50%, 0%);
   background-color: #00000060;
   height: 55px;
-  width: 100%;
+  width: 101%;
   justify-content: space-between;
   backdrop-filter: blur(10px);
 `;
