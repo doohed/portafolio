@@ -9,13 +9,10 @@ const Cont = styled.div`
 `;
 
 const Naav = styled.div`
-
-
-        @media (max-width:462px){
-     justify-content: space-between;
-     align-items: center;
-     
-    }
+  @media (max-width: 462px) {
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
 
 const Projects = () => {

@@ -1,13 +1,13 @@
 .arrows {
-  margin:2px;
+  margin: 2px;
   margin-bottom: 10px;
   @media (max-width: 462px) {
     border-radius: 8px;
     border: 1px solid transparent;
-    padding: 0.6em 1em;
-    margin:4px;
+    padding: 0.6em 0.01em;
+    margin: 4px;
     margin-bottom: 20px;
-    font-size: .7em;
+    font-size: 0.9em;
     font-weight: 500;
     font-family: inherit;
     background-color: #1a1a1a;
@@ -16,6 +16,18 @@
   }
 
   @media (max-width: 416px) {
-    font-size: .65em;
+    font-size: 0.65em;
+  }
+}
+
+.back {
+  @media (max-width: 462px) {
+    padding: 0.6em 0.9em;
+  }
+}
+
+.next {
+  @media (max-width: 462px) {
+    padding: 0.6em 0.9em;
   }
 }
