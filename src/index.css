@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #292929;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -76,4 +76,50 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #242424;
+    background-color: #F0EAD6;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+  h2{
+    color:#242424;
+  }
+  h3 {
+    color:#064f80;
+  }
 
+  .accent{
+    color: #1A786D;
+  }
+
+  .box{
+    border-color: #b5b1a3;
+  }
+
+  .Ttext {
+    color: #242424;
+  }
+
+  .arrows {
+    color: black;
+    background-color: #d6d1c1;
+    &:hover {
+      border-color: black;
+    }
+  }
+
+  .cat {
+    stroke: black;
+   
+  }
+
+  .git {
+    fill: black;
+  }
+}

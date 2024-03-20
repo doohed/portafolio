@@ -22,7 +22,6 @@ const Section = styled.div`
     left: 0%;
     margin-left: 0vw;
     width: 100vw;
-    
   }
 `;
 
@@ -33,10 +32,13 @@ const Blur = styled.div`
   left: 50%;
   top: 0%;
   transform: translate(-50%, 0%);
-  background-color: #2424246e;
+  background-color: #29292994;
   height: 55px;
   width: 101%;
   backdrop-filter: blur(10px);
+  @media (prefers-color-scheme: light) {
+    background-color: #ffffff05;
+  }
 `;
 
 const Title = styled.div`
@@ -73,6 +75,13 @@ const ListItem = styled.a`
   @media (max-width: 400px) {
     font-size: 12px;
   }
+  
+  @media (prefers-color-scheme: light) {
+    color: #242424;
+    &:hover{
+      color: #4d4d4d;
+    }
+  }
 `;
 
 const Navbar = () => {
@@ -83,6 +92,7 @@ const Navbar = () => {
         <Title>
           <ListItem href="/">
             <svg
+            className="cat"
               width="40px"
               height="23px"
               viewBox="0 0 50.8 50.8"
@@ -95,7 +105,8 @@ const Navbar = () => {
                 {" "}
                 <g transform="translate(-4.084 -1.09) scale(1.1608)">
                   {" "}
-                  <ellipse
+                  <ellipse 
+                  className="cat"
                     cx="25.4"
                     cy="27.384"
                     fill="none"
@@ -108,14 +119,14 @@ const Navbar = () => {
                     <circle cx="20.021" cy="23.217" r="1.368"></circle>{" "}
                     <circle cx="30.075" cy="23.217" r="1.368"></circle>{" "}
                   </g>{" "}
-                  <g fill="none" stroke="#ffffff">
+                  <g  className="cat" fill="none" stroke="#ffffff">
                     {" "}
                     <path d="M23.316 25.102s4.465 9.03 7.64 3.473"></path>{" "}
                     <path d="M27.484 25.102s-4.465 9.03-7.64 3.473"></path>{" "}
                     <path d="M21.927 30.66s1.091 4.861 3.473 4.861m3.473-4.861s-1.091 4.86-3.473 4.86"></path>{" "}
                   </g>{" "}
                   <path
-                    fill="none"
+                    fill="none"className="cat"
                     stroke="#ffffff"
                     d="m15.676 18.157.298-12.204 7.342 8.731m11.808 3.076V5.953l-7.64 8.334"
                   ></path>{" "}
@@ -129,8 +140,10 @@ const Navbar = () => {
         </Title>
         <Links>
           <List>
-            <ListItem href={<Projects />}>Projects</ListItem>
-            <ListItem href="https://github.com/doohed/portafolio">Source</ListItem>
+            <ListItem href="/projects">Projects</ListItem>
+            <ListItem href="https://github.com/doohed/portafolio">
+              Source
+            </ListItem>
           </List>
         </Links>
       </Section>

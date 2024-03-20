@@ -232,7 +232,7 @@ function Home() {
                   <defs> </defs>{" "}
                   <g id="Page-1" fill="none">
                     {" "}
-                    <g
+                    <g className="git"
                       id="Dribbble-Light-Preview"
                       transform="translate(-140.000000, -7559.000000)"
                       fill="#ffffff"
