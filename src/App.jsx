@@ -10,26 +10,6 @@ const Container = styled.div`
   scroll-behavior: smooth;
 `;
 
-const Image = styled.div`
-  top: 0px;
-  left: 0px;
-  z-index: -1;
-  position: absolute;
-  height: 100vh;
-  min-height: 1000px;
-  width: 100%;
-  background-image: url(https://wallpapers.com/images/hd/aesthetic-rain-wkfiz5qfrxlbx4fl.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  @media (max-width: 810px) {
-    bottom: 10px;
-    min-height: 1650px;
-  }
-
-
-`;
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,7 +24,6 @@ const router = createBrowserRouter([
 function App() {
   return (
     <Container>
-      <Image />
       <Navbar />
       <RouterProvider router={router} />
     </Container>
@@ -52,3 +31,4 @@ function App() {
 }
 
 export default App;
+

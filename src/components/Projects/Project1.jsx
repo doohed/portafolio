@@ -9,7 +9,6 @@ const Stats = styled.div`
 `;
 
 const Head = styled.div`
-  height: 170px;
   text-align: center;
 `;
 
@@ -20,19 +19,18 @@ const Options = styled.div`
 const Project1 = () => {
   return (
     <div>
-      <h2>Projects</h2>
+      
       <Head>
         <div>
-          <h3>-Product ad page</h3>
+        <h2>Projects</h2>
+          <h3> - Product ad page - </h3>
         </div>
-        <video width="240px" height="150px" autoPlay muted loop>
+        <video width="292px" height="168.75px" autoPlay muted loop>
           <source src="/ecom.webm" type="video/webm" />
         </video>
       </Head>
       <div className="cont">
-        <span>A page showcasing a product.</span>
-        <br />
-        <span>Front-end page for preview a simple product.</span>
+        <p>Simple user friendly page with interactive 3D models.</p>
       </div>
       <Stats>
         <div>
@@ -42,9 +40,6 @@ const Project1 = () => {
             src="https://skillicons.dev/icons?i=vite,js"
           />
         </div>
-        <Options>
-          
-        </Options>
       </Stats>
     </div>
   );

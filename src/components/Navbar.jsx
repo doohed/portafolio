@@ -11,26 +11,30 @@ const Section = styled.div`
   transform: translate(-50%, 0%);
   width: 800px;
   justify-content: space-between;
+  min-width: 356px;
 
-  @media (max-width: 810px) {
-    width: 90vw;
-    left: 6vw;
+  @media (max-width: 870px) {
+    width: 74vw;
+    left: 12vw;
     transform: translate(0%, 0%);
+  }
+  @media (max-width: 492px) {
+    margin-left: -12vw;
+    width: 100vw;
+    
   }
 `;
 
 const Blur = styled.div`
   display: flex;
   position: fixed;
-  justify-content: center;
   z-index: 2;
   left: 50%;
   top: 0%;
   transform: translate(-50%, 0%);
-  background-color: #00000060;
+  background-color: #2424246e;
   height: 55px;
   width: 101%;
-  justify-content: space-between;
   backdrop-filter: blur(10px);
 `;
 
@@ -60,15 +64,14 @@ const ListItem = styled.a`
   cursor: pointer;
   color: #e0e0e0;
   text-decoration: none;
-  &.name:hover {
+  height: 10px;
+  &:hover {
     color: white;
   }
 
   @media (max-width: 400px) {
-    font-size:12px;
+    font-size: 12px;
   }
-
-
 `;
 
 const Navbar = () => {
@@ -85,26 +88,17 @@ const Navbar = () => {
               xmlns="http://www.w3.org/2000/svg"
               fill="#ffffff"
             >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
+              <g id="SVGRepo_bgCarrier"></g>
+              <g id="SVGRepo_tracerCarrier"></g>
               <g id="SVGRepo_iconCarrier">
                 {" "}
-                <g
-                  stroke-width="2.735"
-                  transform="translate(-4.084 -1.09) scale(1.1608)"
-                >
+                <g transform="translate(-4.084 -1.09) scale(1.1608)">
                   {" "}
                   <ellipse
                     cx="25.4"
                     cy="27.384"
                     fill="none"
                     stroke="#ffffff"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
                     rx="13.891"
                     ry="12.303"
                   ></ellipse>{" "}
@@ -113,12 +107,7 @@ const Navbar = () => {
                     <circle cx="20.021" cy="23.217" r="1.368"></circle>{" "}
                     <circle cx="30.075" cy="23.217" r="1.368"></circle>{" "}
                   </g>{" "}
-                  <g
-                    fill="none"
-                    stroke="#ffffff"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
+                  <g fill="none" stroke="#ffffff">
                     {" "}
                     <path d="M23.316 25.102s4.465 9.03 7.64 3.473"></path>{" "}
                     <path d="M27.484 25.102s-4.465 9.03-7.64 3.473"></path>{" "}
@@ -127,8 +116,6 @@ const Navbar = () => {
                   <path
                     fill="none"
                     stroke="#ffffff"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
                     d="m15.676 18.157.298-12.204 7.342 8.731m11.808 3.076V5.953l-7.64 8.334"
                   ></path>{" "}
                 </g>{" "}
@@ -141,8 +128,8 @@ const Navbar = () => {
         </Title>
         <Links>
           <List>
-            <ListItem href="/">Home</ListItem>
             <ListItem href={<Projects />}>Projects</ListItem>
+            <ListItem href="https://github.com/doohed/portafolio">Source</ListItem>
           </List>
         </Links>
       </Section>

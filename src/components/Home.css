@@ -1,7 +1,8 @@
 .home {
   width: 100%;
-  background-color: white;
 }
+
+
 
 .landing {
   &::-webkit-scrollbar{
@@ -41,6 +42,7 @@
 }
 
 .Ttext {
+  color:#8cd5ed;
     border-right: 3px solid;
     animation: blink .5s step-end infinite alternate;
 }
@@ -54,6 +56,19 @@
   margin-top: 30px;
   text-align:left;
 }
+
+.box {
+  border: 2px solid #303030;
+  background-color: #fffffff10;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.accent {
+  color: #f5f587;
+}
+
+
 
 @keyframes blink {
     50% {

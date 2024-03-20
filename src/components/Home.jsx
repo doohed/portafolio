@@ -5,15 +5,12 @@ import styled from "styled-components";
 
 const Presentation = styled.div`
   grid-row-start: 1;
-  grid-row-end: 3;
-  height: 340px;
-  backdrop-filter: blur(10px);
-  background-color: #00000055;
-  border-radius: 10px;
-  margin: 10px;
+  grid-row-end: 4;
+  height: 370px;
+  height: 300px;
   text-align: left;
 
-  @media (max-width: 810px) {
+  @media (max-width: 870px) {
     height: auto;
     width: auto;
     left: 3vw;
@@ -23,37 +20,26 @@ const Presentation = styled.div`
   }
 `;
 const Skills = styled.div`
-  backdrop-filter: blur(10px);
-  background-color: #00000055;
-  border-radius: 10px;
-  margin: 10px;
-  @media (max-width: 810px) {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  @media (max-width: 870px) {
     margin-top: 12px;
+    grid-row-start: auto;
+    grid-row-end: auto;
   }
 `;
 const Terminal = styled.div`
-  backdrop-filter: blur(10px);
-  background-color: #00000055;
-  border-radius: 10px;
-  margin: 10px;
   cursor: pointer;
-  height: 200px;
-  @media (max-width: 810px) {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  @media (max-width: 870px) {
+    height: 180px;
     grid-row-start: 2;
     grid-row-end: 3;
   }
 `;
 
 const SkillsCont = styled.div``;
-
-const Title = styled.div`
-  text-align: center;
-  min-height: 10px;
-  background-color: #0000001f;
-  margin-top: -20px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-`;
 
 const Content = styled.div`
   text-align: left;
@@ -63,9 +49,9 @@ const Content = styled.div`
 
 const Container = styled.div`
   display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 400px 400px;
-  @media (max-width: 810px) {
+  grid-template-rows: 120px 100px 100px 200px;
+  grid-template-columns: 500px;
+  @media (max-width: 870px) {
     margin-left: -2vw;
     width: 74vw;
     min-width: 0px;
@@ -80,7 +66,7 @@ const Container = styled.div`
     grid-template-rows: auto;
     grid-template-columns: auto;
   }
-  @media (max-width: 331px) {
+  @media (max-width: 492px) {
     margin-left: -41px;
     width: 100vw;
     min-width: 300px;
@@ -90,25 +76,17 @@ const Container = styled.div`
 `;
 
 const Socials = styled.div`
-  backdrop-filter: blur(10px);
-  background-color: #00000055;
-  border-radius: 10px;
-  margin: 10px;
   text-align: center;
-  @media (max-width: 810px) {
+  @media (max-width: 870px) {
     bottom: 10px;
   }
 `;
 
 const Procont = styled.div`
-  backdrop-filter: blur(10px);
-  background-color: #00000055;
-  border-radius: 10px;
-  margin: 10px;
   text-align: center;
-  grid-row-start: 2;
-  grid-row-end: 5;
-  @media (max-width: 810px) {
+  grid-row-start: 3;
+  grid-row-end: 6;
+  @media (max-width: 870px) {
     grid-row-start: 4;
     grid-row-end: auto;
   }
@@ -120,8 +98,9 @@ const Head = styled.div`
   text-align: left;
   height: 120px;
 
-  @media (max-width:447px) {
-    height: 160px;
+  @media (max-width: 456px) {
+    margin-bottom: 35px;
+    height: 110px;
   }
 `;
 
@@ -177,7 +156,7 @@ function Home() {
   return (
     <div className="landing">
       <Container id="home">
-        <Presentation>
+        <Presentation className="box">
           <Cont>
             <Head>
               <div>
@@ -190,18 +169,17 @@ function Home() {
               />
             </Head>
             <br />
-            <span>
-              Based in Mexico with a passion for building digital services.
-            </span>
-            <br />
-            <br />
-            <span>
-              I like planning and designing all the way to solving real-life
-              problems with code.
-            </span>
+            <p>
+              Based in <span className="accent">Mexico</span> with a passion for
+              building digital services.
+            </p>
+            <p>
+              I like planning and designing all the way to <span className="accent">solving real-life
+              problems with code.</span>
+            </p>
           </Cont>
         </Presentation>
-        <Skills>
+        <Skills className="box">
           <SkillsCont>
             <h2>Skills</h2>
             <div className="icons-holder">
@@ -216,10 +194,10 @@ function Home() {
             </div>
           </SkillsCont>
         </Skills>
-        <Terminal onClick={changeT}>
-          <Title>
+        <Terminal onClick={changeT} className="box">
+        
             <h2>About</h2>
-          </Title>
+        
           <Content>
             <span className="Ttext">
               {Arrow}
@@ -227,7 +205,7 @@ function Home() {
             </span>
           </Content>
         </Terminal>
-        <Socials>
+        <Socials className="box">
           <h2>Socials</h2>
           <SocialIcons>
             <a href="https://www.linkedin.com/in/bojorquez-godina-martin-esteban-908609270/">
@@ -243,25 +221,15 @@ function Home() {
                 viewBox="0 -2 20.00 20.00"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
                 fill="#000000"
               >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
+                <g id="SVGRepo_bgCarrier"></g>
+                <g id="SVGRepo_tracerCarrier"></g>
                 <g id="SVGRepo_iconCarrier">
                   {" "}
                   <title>github [#142]</title> <desc>Created with Sketch.</desc>{" "}
                   <defs> </defs>{" "}
-                  <g
-                    id="Page-1"
-                    stroke-width="0.0002"
-                    fill="none"
-                    fill-rule="evenodd"
-                  >
+                  <g id="Page-1" fill="none">
                     {" "}
                     <g
                       id="Dribbble-Light-Preview"
@@ -301,7 +269,7 @@ function Home() {
           </SocialIcons>
         </Socials>
 
-        <Procont>
+        <Procont className="box">
           <Projects />
         </Procont>
       </Container>
