@@ -51,28 +51,26 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: 120px 100px 100px 200px;
   grid-template-columns: 500px;
+  margin-top: 10px;
+  overflow-x: hidden;
   @media (max-width: 870px) {
-    margin-left: -2vw;
+    margin-left: 0vw;
     width: 74vw;
     min-width: 0px;
     grid-template-rows: auto;
     grid-template-columns: auto;
   }
 
-  @media (max-width: 375px) {
-    margin-left: -22px;
-    width: 90vw;
-    min-width: 300px;
-    grid-template-rows: auto;
-    grid-template-columns: auto;
-  }
   @media (max-width: 492px) {
-    margin-left: -41px;
-    width: 100vw;
-    min-width: 300px;
+    margin-left: 0vw;
+    width: 100%;
+    min-width: 0px;
     grid-template-rows: auto;
     grid-template-columns: auto;
   }
+
+
+
 `;
 
 const Socials = styled.div`

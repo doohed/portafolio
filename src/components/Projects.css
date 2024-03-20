@@ -7,7 +7,7 @@
     margin: 4px;
     margin-bottom: 20px;
     font-size: 0.9em;
-    
+
     cursor: pointer;
     transition: border-color 0.25s;
   }
@@ -30,7 +30,11 @@
 }
 
 video {
-  border-radius:10px;
-  width:292px; 
-  height:168.75px;
+  border-radius: 10px;
+  width: 292px;
+  height: 168.75px;
+  @media (max-width: 360px) {
+    width: 70vw;
+    height: 40vw;
+  }
 }
