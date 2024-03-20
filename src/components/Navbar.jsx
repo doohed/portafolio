@@ -11,15 +11,16 @@ const Section = styled.div`
   transform: translate(-50%, 0%);
   width: 800px;
   justify-content: space-between;
-  min-width: 356px;
+  min-width: 274px;
 
   @media (max-width: 870px) {
-    width: 74vw;
+    width: 76vw;
     left: 12vw;
     transform: translate(0%, 0%);
   }
   @media (max-width: 492px) {
-    margin-left: -12vw;
+    left: 0%;
+    margin-left: 0vw;
     width: 100vw;
     
   }
