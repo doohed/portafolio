@@ -20,8 +20,7 @@ const Presentation = styled.div`
   }
 `;
 const Skills = styled.div`
-  grid-row-start: 1;
-  grid-row-end: 3;
+ 
   @media (max-width: 870px) {
     margin-top: 12px;
     grid-row-start: auto;
@@ -75,7 +74,11 @@ const Container = styled.div`
 
 const Socials = styled.div`
   text-align: center;
+  grid-row-start: 1;
+  grid-row-end: 3;
   @media (max-width: 870px) {
+    grid-row-start: 5;
+  grid-row-end: auto;
     bottom: 10px;
   }
 `;
@@ -182,11 +185,11 @@ function Home() {
             <h2>Skills</h2>
             <div className="icons-holder">
               <img
-                className="skill-set"
+                className="skill-set skills"
                 src="https://skillicons.dev/icons?i=react,next,vue,vite"
               />
               <img
-                className="skill-set"
+                className="skill-set skills"
                 src="https://skillicons.dev/icons?i=tailwind,nodejs,mongodb,linux"
               />
             </div>

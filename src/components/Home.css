@@ -31,6 +31,7 @@
   left: 50px;
   place-items: center;
   margin:15px;
+  margin-top:50px;
   @media (max-width: 800px) {
     margin: 10px;
   }
