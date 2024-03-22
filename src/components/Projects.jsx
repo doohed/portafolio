@@ -36,7 +36,6 @@ function Projects() {
   const [currentProject, setCurrentProject] = useState(prods[count]);
 
   useEffect(() => {
-    console.log(prods[count].page);
     return setCurrentProject(prods[count]);
   }, [count]);
 
