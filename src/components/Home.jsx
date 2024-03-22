@@ -19,7 +19,7 @@ const Presentation = styled.div`
   }
 `;
 const Skills = styled.div`
-animation: slide-Left 0.2s both;
+  animation: slide-Left 0.2s both;
   @media (max-width: 870px) {
     margin-top: 12px;
     grid-row-start: auto;
@@ -50,7 +50,7 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: 120px 100px 100px 200px;
   grid-template-columns: 500px 400px;
-  
+
   margin-top: 10px;
   overflow-x: hidden;
   @media (max-width: 870px) {
@@ -127,6 +127,7 @@ function Home() {
     " I usually code as a hobby",
   ];
 
+  const email = "bojorquezdev@gmail.com"
   const [count, setCount] = useState(1);
   const [targetText, setTargetText] = useState(text[0]);
   const Arrow = ">> ";
@@ -157,6 +158,7 @@ function Home() {
     }
   }
 
+  
   return (
     <div className="landing">
       <Container id="home">
@@ -209,7 +211,7 @@ function Home() {
           </Content>
         </Terminal>
         <Socials className="box">
-          <h2>Socials</h2>
+          <h2>Contact</h2>
           <SocialIcons>
             <a href="https://www.linkedin.com/in/bojorquez-godina-martin-esteban-908609270/">
               <img
@@ -258,21 +260,11 @@ function Home() {
                 </g>
               </svg>
             </a>
-            <a href="https://www.instagram.com/dohed_/">
-              <img
-                className="iconss"
-                src="https://cdn.icon-icons.com/icons2/1584/PNG/96/3721672-instagram_108066.png"
-              />
-            </a>
-            <a href="https://steamcommunity.com/id/dodoshi/">
-              <img
-                className="iconss"
-                src="https://cdn.icon-icons.com/icons2/3053/PNG/96/steam_alt_macos_bigsur_icon_189698.png"
-              />
-            </a>
           </SocialIcons>
+          <button onClick={() => {
+         navigator.clipboard.writeText(email);}}>bojorquezdev@gmail.com</button> 
+           
         </Socials>
-
         <Procont className="box">
           <Projects />
         </Procont>
