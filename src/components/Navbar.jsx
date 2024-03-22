@@ -9,7 +9,7 @@ const Section = styled.div`
   left: 50%;
   top: 0%;
   transform: translate(-50%, 0%);
-  width: 800px;
+  width: 900px;
   justify-content: space-between;
   min-width: 274px;
 
@@ -32,17 +32,15 @@ const Blur = styled.div`
   left: 50%;
   top: 0%;
   transform: translate(-50%, 0%);
-  background-color: #29292994;
+  background-color: #ffffff01;
   height: 55px;
   width: 101%;
   backdrop-filter: blur(10px);
-  @media (prefers-color-scheme: light) {
-    background-color: #ffffff05;
-  }
 `;
 
 const Title = styled.div`
   margin-top: 18px;
+  margin-left: 4px;
   display: flex;
   @media (max-width: 331px) {
     width: 10px;
@@ -60,7 +58,7 @@ const List = styled.ul`
   display: flex;
   gap: 20px;
   list-style: none;
-  margin-right: 20px;
+  margin-right: 12px;
 `;
 
 const ListItem = styled.a`
@@ -75,10 +73,10 @@ const ListItem = styled.a`
   @media (max-width: 400px) {
     font-size: 12px;
   }
-  
+
   @media (prefers-color-scheme: light) {
     color: #242424;
-    &:hover{
+    &:hover {
       color: #4d4d4d;
     }
   }
@@ -89,10 +87,10 @@ const Navbar = () => {
     <div className="navbar">
       <Blur></Blur>
       <Section>
-        <Title>
+        <Title className="title">
           <ListItem href="/">
             <svg
-            className="cat"
+              className="cat"
               width="40px"
               height="23px"
               viewBox="0 0 50.8 50.8"
@@ -105,8 +103,8 @@ const Navbar = () => {
                 {" "}
                 <g transform="translate(-4.084 -1.09) scale(1.1608)">
                   {" "}
-                  <ellipse 
-                  className="cat"
+                  <ellipse
+                    className="cat"
                     cx="25.4"
                     cy="27.384"
                     fill="none"
@@ -119,14 +117,15 @@ const Navbar = () => {
                     <circle cx="20.021" cy="23.217" r="1.368"></circle>{" "}
                     <circle cx="30.075" cy="23.217" r="1.368"></circle>{" "}
                   </g>{" "}
-                  <g  className="cat" fill="none" stroke="#ffffff">
+                  <g className="cat" fill="none" stroke="#ffffff">
                     {" "}
                     <path d="M23.316 25.102s4.465 9.03 7.64 3.473"></path>{" "}
                     <path d="M27.484 25.102s-4.465 9.03-7.64 3.473"></path>{" "}
                     <path d="M21.927 30.66s1.091 4.861 3.473 4.861m3.473-4.861s-1.091 4.86-3.473 4.86"></path>{" "}
                   </g>{" "}
                   <path
-                    fill="none"className="cat"
+                    fill="none"
+                    className="cat"
                     stroke="#ffffff"
                     d="m15.676 18.157.298-12.204 7.342 8.731m11.808 3.076V5.953l-7.64 8.334"
                   ></path>{" "}
@@ -134,8 +133,8 @@ const Navbar = () => {
               </g>
             </svg>
           </ListItem>
-          <ListItem className="name" href="/">
-            Martin Bojorquez
+          <ListItem href="/">
+            <span className="name">Martin Bojorquez</span>
           </ListItem>
         </Title>
         <Links>

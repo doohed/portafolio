@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import "./ProjectLayout.css";
 
@@ -11,7 +12,7 @@ const Head = styled.div`
 `;
 
 const Container = styled.div`
-animation: slide-in 0.8s both;
+  animation: slide-in 0.8s both;
 `;
 
 function Project() {
@@ -19,7 +20,7 @@ function Project() {
     <Container>
       <Head>
         <div>
-          <h2>Projects</h2>
+          <h2>2</h2>
           <h3> - Product ad page - </h3>
         </div>
         <video width="292px" height="168.75px" autoPlay muted loop>
@@ -34,7 +35,7 @@ function Project() {
           <h4>Tech</h4>
           <img
             className="skill-set"
-            src="https://skillicons.dev/icons?i=vite,js,css,styledcomponents"
+            src="https://skillicons.dev/icons?i=vite,js,styledcomponents"
           />
         </div>
       </Stats>

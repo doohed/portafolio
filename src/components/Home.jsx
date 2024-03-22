@@ -6,10 +6,9 @@ import styled from "styled-components";
 const Presentation = styled.div`
   grid-row-start: 1;
   grid-row-end: 4;
-  height: 370px;
   height: 300px;
   text-align: left;
-
+  animation: slide-Left 0.8s both;
   @media (max-width: 870px) {
     height: auto;
     width: auto;
@@ -20,7 +19,7 @@ const Presentation = styled.div`
   }
 `;
 const Skills = styled.div`
- 
+animation: slide-Left 0.2s both;
   @media (max-width: 870px) {
     margin-top: 12px;
     grid-row-start: auto;
@@ -31,6 +30,7 @@ const Terminal = styled.div`
   cursor: pointer;
   grid-row-start: 4;
   grid-row-end: 5;
+  animation: slide-Left 0.4s both;
   @media (max-width: 870px) {
     height: 180px;
     grid-row-start: 2;
@@ -49,7 +49,8 @@ const Content = styled.div`
 const Container = styled.div`
   display: grid;
   grid-template-rows: 120px 100px 100px 200px;
-  grid-template-columns: 500px;
+  grid-template-columns: 500px 400px;
+  
   margin-top: 10px;
   overflow-x: hidden;
   @media (max-width: 870px) {
@@ -67,18 +68,16 @@ const Container = styled.div`
     grid-template-rows: auto;
     grid-template-columns: auto;
   }
-
-
-
 `;
 
 const Socials = styled.div`
   text-align: center;
   grid-row-start: 1;
   grid-row-end: 3;
+  animation: slide-Right 0.8s both;
   @media (max-width: 870px) {
     grid-row-start: 5;
-  grid-row-end: auto;
+    grid-row-end: auto;
     bottom: 10px;
   }
 `;
@@ -87,6 +86,7 @@ const Procont = styled.div`
   text-align: center;
   grid-row-start: 3;
   grid-row-end: 6;
+  animation: slide-Right 0.4s both;
   @media (max-width: 870px) {
     grid-row-start: 4;
     grid-row-end: auto;
@@ -95,18 +95,20 @@ const Procont = styled.div`
 
 const Head = styled.div`
   display: flex;
-  justify-content: space-between;
   text-align: left;
-  height: 120px;
-
-  @media (max-width: 456px) {
-    margin-bottom: 35px;
-    height: 110px;
+  height: 100px;
+  justify-content: space-between;
+  @media (max-width: 527px) {
+    height: 120px;
+  }
+  @media (max-width: 378px) {
+    margin-bottom: 50px;
   }
 `;
 
 const Cont = styled.div`
   margin: 15px;
+  align-items: center;
 `;
 
 const SocialIcons = styled.div``;
@@ -162,7 +164,7 @@ function Home() {
             <Head>
               <div>
                 <h2>Martin Bojorquez</h2>
-                <h3> ~ Fullstack web developer</h3>
+                <h3> - Fullstack web developer</h3>
               </div>
               <img
                 className="avatar"
@@ -175,8 +177,10 @@ function Home() {
               building digital services.
             </p>
             <p>
-              I like planning and designing all the way to <span className="accent">solving real-life
-              problems with code.</span>
+              I like planning and designing all the way to{" "}
+              <span className="accent">
+                solving real-life problems with code.
+              </span>
             </p>
           </Cont>
         </Presentation>
@@ -196,14 +200,11 @@ function Home() {
           </SkillsCont>
         </Skills>
         <Terminal onClick={changeT} className="box">
-        
-            <h2>About</h2>
-        
+          <h2>About</h2>
+
           <Content>
-            <span className="Ttext">
-              {Arrow}
-              {currentText}
-            </span>
+            <span className="accent">{Arrow}</span>
+            <span className="Ttext">{currentText}</span>
           </Content>
         </Terminal>
         <Socials className="box">
@@ -232,7 +233,8 @@ function Home() {
                   <defs> </defs>{" "}
                   <g id="Page-1" fill="none">
                     {" "}
-                    <g className="git"
+                    <g
+                      className="git"
                       id="Dribbble-Light-Preview"
                       transform="translate(-140.000000, -7559.000000)"
                       fill="#ffffff"

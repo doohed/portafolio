@@ -2,14 +2,10 @@
   width: 100%;
 }
 
-
-
 .landing {
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     display: none;
-    
   }
-  
 }
 
 .btn-h {
@@ -17,8 +13,10 @@
 }
 
 .avatar {
-    height: 90px;
-    border-radius: 50%;
+  height: 110px;
+  border-radius: 50%;
+  border: 2px solid #303030;
+  margin-top:5px;
 }
 
 .projectP {
@@ -30,32 +28,30 @@
   grid-template-rows: auto auto;
   left: 50px;
   place-items: center;
-  margin:15px;
-  margin-top:50px;
+  margin: 15px;
+  margin-top: 50px;
   @media (max-width: 800px) {
     margin: 10px;
   }
 }
-
 
 .skill-set {
   margin-top: 3px;
 }
 
 .Ttext {
-  color:#8cd5ed;
-    border-right: 3px solid;
-    animation: blink .5s step-end infinite alternate;
+  border-right: 3px solid;
+  animation: blink 0.5s step-end infinite alternate;
 }
 
 .iconss {
   height: 50px;
-  margin: 1px
+  margin: 1px;
 }
 
 .cont {
   margin-top: 30px;
-  text-align:left;
+  text-align: left;
 }
 
 .box {
@@ -69,11 +65,8 @@
   color: #f5f587;
 }
 
-
-
 @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
+  50% {
+    border-color: transparent;
   }
-
+}

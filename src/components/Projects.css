@@ -39,3 +39,14 @@ video {
     height: 40vw;
   }
 }
+
+.right {
+  animation: slide-Left 0.8s both;
+}
+
+.left {
+  animation: slide-Left 0.8s both;
+}
+
+
+
