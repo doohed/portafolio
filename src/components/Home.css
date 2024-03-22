@@ -113,5 +113,9 @@
 }
 
 .menu-item {
-  font-size: 20px;
+  font-size: 18px;
+}
+
+.menu-item-cont {
+  margin-top: 20px;
 }

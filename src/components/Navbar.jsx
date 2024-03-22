@@ -198,12 +198,12 @@ const Navbar = () => {
             </button>
 
             <Menu className="box menu" id="menu">
-              <div>
+              <div className="menu-item-cont">
                 <ListItem className="menu-item" href="projects" onClick={menu}>
                   Projects
                 </ListItem>
               </div>
-              <div>
+              <div className="menu-item-cont">
                 <ListItem
                   className="menu-item"
                   href="https://github.com/doohed/portafolio"
