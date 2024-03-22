@@ -86,6 +86,7 @@ const Procont = styled.div`
   text-align: center;
   grid-row-start: 3;
   grid-row-end: 6;
+  height: 590px;
   animation: slide-Right 0.4s both;
   @media (max-width: 870px) {
     grid-row-start: 4;

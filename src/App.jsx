@@ -4,7 +4,7 @@ import Projects from "./Projects";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import styled from "styled-components";
-import { RouterProvider, createBrowserRouter, Route } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const Container = styled.div`
   scroll-behavior: smooth;

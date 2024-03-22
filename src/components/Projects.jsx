@@ -8,9 +8,10 @@ import { useEffect, useState } from "react";
 
 const Cont = styled.div`
   margin: 20px;
+  height: 490px;
 `;
 
-const Naav = styled.div`
+const Nav = styled.div`
   margin-bottom: 10px;
   @media (max-width: 462px) {
     justify-content: space-between;
@@ -33,10 +34,6 @@ function Projects() {
 
   const [count, setCount] = useState(0);
   const [currentProject, setCurrentProject] = useState(prods[count]);
-  const [animation, setAnimation] = useState("");
-  const [currentAnimation, setCurrentAnimation] = useState("");
-
-
 
   useEffect(() => {
     console.log(prods[count].page);
@@ -44,7 +41,6 @@ function Projects() {
   }, [count]);
 
   function onClickHandlePlus() {
-    setAnimation("right");
     if (count === 2) {
       setCount(0);
     } else {
@@ -53,7 +49,6 @@ function Projects() {
   }
 
   function onclickHandleLess() {
-    setAnimation("left");
     if (count === 0) {
       setCount(2);
     } else {
@@ -64,7 +59,7 @@ function Projects() {
   return (
     <div className="projects">
       <Cont>{currentProject.page}</Cont>
-      <Naav>
+      <Nav>
         <a onClick={onclickHandleLess}>
           <button className="arrows back">{"<"}</button>
         </a>
@@ -77,7 +72,7 @@ function Projects() {
         <a onClick={onClickHandlePlus}>
           <button className="arrows next">{">"}</button>
         </a>
-      </Naav>
+      </Nav>
     </div>
   );
 }

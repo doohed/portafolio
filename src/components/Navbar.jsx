@@ -139,7 +139,7 @@ const Navbar = () => {
         </Title>
         <Links>
           <List>
-            <ListItem href="/projects">Projects</ListItem>
+            <ListItem href="projects">Projects</ListItem>
             <ListItem href="https://github.com/doohed/portafolio">
               Source
             </ListItem>
