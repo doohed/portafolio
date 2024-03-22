@@ -1,5 +1,5 @@
 :root {
-  font-family: Menlo, Monaco, Lucida Console, 'Courier New', Courier;
+  font-family: Menlo, Monaco, Lucida Console, "Courier New", Courier;
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,7 +11,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x:hidden;
+  overflow-x: hidden;
   width: 100vw;
   font-size: 17px;
 }
@@ -37,11 +37,11 @@ a:hover {
 
 body {
   overflow-y: hidden;
-  
+
   display: flex;
   place-items: center;
-  margin-top:40px;
- 
+  margin-top: 40px;
+
   background-size: cover;
   @media (max-width: 870px) {
     overflow-y: auto;
@@ -73,14 +73,13 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  
   outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #242424;
-    background-color: #F0EAD6;
+    background-color: #f0ead6;
   }
   a:hover {
     color: #747bff;
@@ -88,18 +87,18 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-  h2{
-    color:#242424;
+  h2 {
+    color: #242424;
   }
   h3 {
-    color:#303030;
+    color: #303030;
   }
 
-  .accent{
+  .accent {
     color: #0e8a7c;
   }
 
-  .box{
+  .box {
     border-color: #d4cebc;
   }
 
@@ -107,9 +106,11 @@ button:focus-visible {
     color: #242424;
   }
 
+  .hamcont,
+  .email,
   .arrows {
     color: black;
-    background-color: #d6d1c1;
+    background-color: #e6e0cc;
     &:hover {
       border-color: black;
     }
@@ -117,7 +118,6 @@ button:focus-visible {
 
   .cat {
     stroke: black;
-   
   }
 
   .git {

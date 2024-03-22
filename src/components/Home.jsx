@@ -32,7 +32,7 @@ const Terminal = styled.div`
   grid-row-end: 5;
   animation: slide-Left 0.4s both;
   @media (max-width: 870px) {
-    height: 180px;
+    height: 200px;
     grid-row-start: 2;
     grid-row-end: 3;
   }
@@ -48,7 +48,7 @@ const Content = styled.div`
 
 const Container = styled.div`
   display: grid;
-  grid-template-rows: 120px 100px 100px 200px;
+  grid-template-rows: 130px 100px 100px 200px;
   grid-template-columns: 500px 400px;
 
   margin-top: 10px;
@@ -79,6 +79,7 @@ const Socials = styled.div`
     grid-row-start: 5;
     grid-row-end: auto;
     bottom: 10px;
+    height: 250px;
   }
 `;
 
@@ -99,8 +100,8 @@ const Head = styled.div`
   text-align: left;
   height: 100px;
   justify-content: space-between;
-  @media (max-width: 527px) {
-    height: 120px;
+  @media (max-width: 627px) {
+    height: 150px;
   }
   @media (max-width: 378px) {
     margin-bottom: 50px;
@@ -121,13 +122,13 @@ function Home() {
     " My favorite games are the souls saga",
     " Let's keep trying, Never give up!!",
     " When I'm not online, I love going out on my bike",
-    " There's my contact info down there...",
+    " I have a lot of experience but I'm still looking for the opportunity to work as a dev",
     " I'm still looking for a job :c",
     " I love minimalism thats the reason I prefer linux",
     " I usually code as a hobby",
   ];
-
-  const email = "bojorquezdev@gmail.com"
+  const [isCopied, setIsCopied] = useState(false);
+  const email = "bojorquezdev@gmail.com";
   const [count, setCount] = useState(1);
   const [targetText, setTargetText] = useState(text[0]);
   const Arrow = ">> ";
@@ -158,7 +159,20 @@ function Home() {
     }
   }
 
-  
+  useEffect(() => {
+    if (isCopied) {
+      console.log("Text has been copied to the clipboard");
+
+      setTimeout(() => setIsCopied(false), 2500);
+    }
+  }, [isCopied]);
+
+  const onCopyHandler = () => {
+    setIsCopied(true);
+
+    setTimeout(() => setIsCopied(false), 2500);
+  };
+
   return (
     <div className="landing">
       <Container id="home">
@@ -261,9 +275,21 @@ function Home() {
               </svg>
             </a>
           </SocialIcons>
-          <button onClick={() => {
-         navigator.clipboard.writeText(email);}}>bojorquezdev@gmail.com</button> 
-           
+       
+            <span>bojorquezdev@gmail.com</span>
+       
+          <button
+            className="email"
+            onClick={() => {
+              navigator.clipboard.writeText(email);
+              onCopyHandler();
+            }}
+          >
+            copy
+          </button>
+          {isCopied && (
+            <div className="alert-success">Copied to clipboard!</div>
+          )}
         </Socials>
         <Procont className="box">
           <Projects />

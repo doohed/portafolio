@@ -22,9 +22,10 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+
   return (
     <Container>
-      <Navbar />
+      <Navbar/>
       <RouterProvider router={router} />
     </Container>
   );

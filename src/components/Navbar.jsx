@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
-import Projects from "../Projects";
+import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 const Section = styled.div`
   display: flex;
@@ -12,6 +13,7 @@ const Section = styled.div`
   width: 900px;
   justify-content: space-between;
   min-width: 274px;
+  animation: slide-in 0.8s both;
 
   @media (max-width: 870px) {
     width: 76vw;
@@ -59,6 +61,10 @@ const List = styled.ul`
   gap: 20px;
   list-style: none;
   margin-right: 12px;
+  @media (max-width: 870px) {
+    margin-right: 0px;
+    margin-top: 14px;
+  }
 `;
 
 const ListItem = styled.a`
@@ -66,12 +72,11 @@ const ListItem = styled.a`
   color: #e0e0e0;
   text-decoration: none;
   height: 10px;
+
   &:hover {
     color: white;
   }
-
   @media (max-width: 400px) {
-    font-size: 12px;
   }
 
   @media (prefers-color-scheme: light) {
@@ -82,7 +87,42 @@ const ListItem = styled.a`
   }
 `;
 
+const Ham = styled.div`
+  margin-right: 18px;
+  margin-top: 0px;
+  display: none;
+  @media (max-width: 870px) {
+    display: inline;
+  }
+`;
+
+const Menu = styled.div`
+  position: absolute;
+  right: 8px;
+  top: 50px;
+  background-color: #ffffff10;
+  width: 240px;
+  height: 200px;
+  opacity: 0;
+  pointer-events: none;
+  backdrop-filter: blur(10px);
+`;
+
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function menu() {
+    if (isOpen === true) {
+      document.querySelector("#menu").classList.remove("show");
+      document.querySelector("#menu").classList.add("hide");
+      setIsOpen(false);
+    } else {
+      document.querySelector("#menu").classList.remove("hide");
+      document.querySelector("#menu").classList.add("show");
+      setIsOpen(true);
+    }
+  }
+
   return (
     <div className="navbar">
       <Blur></Blur>
@@ -139,11 +179,38 @@ const Navbar = () => {
         </Title>
         <Links>
           <List>
-            <ListItem href="projects">Projects</ListItem>
-            <ListItem href="https://github.com/doohed/portafolio">
+            <ListItem className="changed" href="projects">
+              Projects
+            </ListItem>
+            <ListItem
+              className="changed"
+              href="https://github.com/doohed/portafolio"
+            >
               Source
             </ListItem>
           </List>
+          <Ham>
+            <button onClick={menu} className="hamcont">
+              <img className="hamburger" src="/ham.svg" />
+            </button>
+
+            <Menu className="box menu" id="menu">
+              <div>
+                <ListItem className="menu-item" href="projects" onClick={menu}>
+                  Projects
+                </ListItem>
+              </div>
+              <div>
+                <ListItem
+                  className="menu-item"
+                  href="https://github.com/doohed/portafolio"
+                  onClick={menu}
+                >
+                  Source
+                </ListItem>
+              </div>
+            </Menu>
+          </Ham>
         </Links>
       </Section>
     </div>

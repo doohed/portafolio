@@ -65,8 +65,53 @@
   color: #f5f587;
 }
 
+.email {
+  margin-left:10px;
+  font-size: 0.85em;
+}
+
 @keyframes blink {
   50% {
     border-color: transparent;
   }
+}
+
+.hamburger {
+  height:20px;
+  margin-top:6px
+}
+
+.hamcont {
+  border-radius: 8px;
+  margin-top: 10px;
+  border: 1px solid transparent;
+  padding: 0.1em .6em;
+  background-color: #ffffff10;
+  transition: border-color 0.25s;
+}
+
+.changed {
+  @media (max-width: 870px) {
+    display: none;
+  }
+}
+
+.theme {
+  @media (max-width: 870px) {
+    margin-right: -20px; 
+  }
+}
+
+#menu.show {
+  display: inline;
+  animation: slide-in 0.8s forwards;
+  pointer-events: all;
+}
+
+#menu.hide {
+  animation: slide-out 0.8s forwards;
+}
+
+.menu-item {
+  font-size: 20px;
 }

@@ -22,6 +22,15 @@
   }
 }
 
+@keyframes slide-out {
+  0% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes slide-Right {
   0% {
     transform: translateX(50px);
