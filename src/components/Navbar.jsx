@@ -100,12 +100,15 @@ const Menu = styled.div`
   position: absolute;
   right: 8px;
   top: 50px;
-  background-color: #0c0c0c36;
+  background-color: #202023f9;
   width: 240px;
   height: 200px;
   opacity: 0;
   pointer-events: none;
-  backdrop-filter: blur(10px);
+  @media (prefers-color-scheme: light) {
+    background-color: #f0ead6f6;
+  }
+  
 `;
 
 const Navbar = () => {
