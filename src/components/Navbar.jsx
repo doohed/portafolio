@@ -100,7 +100,7 @@ const Menu = styled.div`
   position: absolute;
   right: 8px;
   top: 50px;
-  background-color: #ffffff10;
+  background-color: #0c0c0c36;
   width: 240px;
   height: 200px;
   opacity: 0;
